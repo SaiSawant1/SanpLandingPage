@@ -1,11 +1,13 @@
+import  { WindowProvider } from "./context/WidthContext";
 import LandingPage from "./pages/LandingPage";
 
 
 function App() {
   return (
-    <>
-    <LandingPage/>
-    </>
+    <WindowProvider >
+      <LandingPage/> 
+    </WindowProvider>
+    
   );
 }
 
