@@ -4,6 +4,7 @@ import React from 'react'
 import FeaturesList from './FeaturesList'
 import CompanyList from './CompanyList'
 import { useWidthContext } from '../context/WidthContext'
+import menu from "../images/icon-menu.svg"
 
 const NavBar = () => {
   const {width}=useWidthContext()
@@ -30,11 +31,10 @@ const NavBar = () => {
   <button  className='w-[100px] ml-[30px] border h-[40px] border-black rounded-[10px]'>register</button>
 </div>
   return (
-    <nav className={width>768?'w-full px-[30px] py-[40px] h-[82px] flex  items-center':'w-full px-[15px] py-[20px] h-[82px] flex  items-center'}>
-        <div className='font-bold mr-[60px] text-4xl flex '>snap</div>
+    <nav className={width>768?'w-full px-[30px] py-[40px] h-[82px] flex  items-center':'w-full px-[15px] py-[20px] h-[82px] flex justify-between items-center'}>        <div className='font-bold mr-[60px] text-4xl flex '>snap</div>
         {width>=768&&navList}
         {width>=768&&buttons}
-        
+        {!(width>=768)&&<img src={menu} alt="" className='cursor-pointer'/>}
     </nav>
   )
 }
