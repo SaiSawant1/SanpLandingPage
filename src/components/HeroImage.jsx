@@ -5,7 +5,7 @@ import { useWidthContext } from '../context/WidthContext'
 const HeroImage = () => {
     const {width}=useWidthContext()
   return (
-    <div><img  className={width>=768?'w-[488px] object-fill h-[638px]':'object-fill h-[280px]'} src={width>=768?heroImg:heroImgMob} alt="" /></div>
+    <div><img  className={width>=768?'w-[488px] object-fill h-[638px]':'object-contain w-[100%] h-[280px]'} src={width>=768?heroImg:heroImgMob} alt="" /></div>
   )
 }
 
